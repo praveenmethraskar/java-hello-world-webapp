@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World ? code changed again for pollscm</h2>
+<h2>Hello World ? code changed again for pipeline</h2>
 </body>
 </html>
