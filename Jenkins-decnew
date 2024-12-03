@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('clone'){
             steps{
-                git 'https://github.com/praveenmethraskar/java-hello-world-webapp.git'
+                git credentialsId: '85fb88d3-ba32-4aec-8c0f-ba21e70c11f2', url: 'https://github.com/praveenmethraskar/java-hello-world-webapp.git'
             }
         }
         stage('build maven'){
