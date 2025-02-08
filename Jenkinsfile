@@ -42,5 +42,11 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+                stage('deploy') {
+            agent { label 'slave-node-1' }
+            steps {
+                deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://13.203.104.115:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
     }
 }
